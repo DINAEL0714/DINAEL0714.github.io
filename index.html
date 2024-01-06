@@ -17,12 +17,17 @@
     }
     .heart{
         height: 150px;
-        width: 150px;
+        width: 15px;
         background-color: red;
         position: relative;
         transform: rotate(45deg);
         box-shadow: -20px   20px 150px #f20044;
         animation: palpitar 0.5s linear infinite alternate;
+    }
+    @keyframes palpitar{
+        0%{transform: rotate(45deg) scale(1.10);}
+        80%{transform: rotate(45deg) scale(1.0);}
+        100%{transform: rotate(45deg) scale(0.8);}
     }
     .heart::before{
         content: "";
@@ -35,13 +40,21 @@
         box-shadow: 20px 20px 20px 150px #f20044;
 
     }
-    @keyframes palpitar{
-        0%{transform: rotate(45deg) scale(1.10);}
-        80%{transform: rotate(45deg) scale(1.0);}
-        100%{transform: rotate(45deg) scale(0.8);}
+    .heart::after{
+        content: "";
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background: red;
+        top: -50%;
+        border-radius: 50%;
+        box-shadow: 20px 20px 150px #f20044;
     }
+
+
 </style>
 <body>
     <div class="heart"></div>
+    <div class="contenido"><h1>TE AMO</h1><H2>........ </H2></div>
 </body>
 </html>
